@@ -1,0 +1,119 @@
+.middle {
+  position: absolute;
+  height: 90%;
+  width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.price_top2 {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 5%;
+}
+
+.price_top {
+  width: 100%;
+  height: 22%;
+  border-bottom: #818181 solid 1px;
+}
+.price_middle {
+  width: 100%;
+  height: 56%;
+  align-items: center;
+  border-bottom: #818181 solid 1px;
+}
+
+.float_left {
+  float: left;
+}
+
+.price_middle2 {
+  border-bottom: black solid 1px;
+  margin-left: 10%;
+  width: 80%;
+  float: left;
+}
+
+.price_middle_plus {
+  float: right;
+}
+
+.price_middle3 {
+  margin-top: 10%;
+}
+
+.price_bottom {
+  display: flex;
+  width: 100%;
+  height: 22%;
+  align-items: center;
+  justify-content: center;
+}
+
+.maps {
+  background-color: bisque;
+  width: 70vw;
+  height: 75vh;
+  float: left;
+  border-radius: 5px;
+  box-shadow: 5px 10px 4px rgb(0, 0, 0, 25%);
+}
+
+.map1 {
+  background-color: bisque;
+  width: 32vw;
+  height: 75vh;
+  float: left;
+  border-radius: 5px;
+  box-shadow: 5px 10px 4px rgb(0, 0, 0, 25%);
+  margin-right: 5vw;
+}
+
+.map2 {
+  background-color: bisque;
+  width: 32vw;
+  height: 75vh;
+  float: left;
+  border-radius: 5px;
+  box-shadow: 5px 10px 4px rgb(0, 0, 0, 25%);
+}
+
+.maps1 {
+  width: 32vw;
+  float: left;
+  margin-right: 5vw;
+}
+.prices {
+  width: 20vw;
+  float: left;
+}
+
+.text {
+  color: white;
+}
+
+.price {
+  background-color: #d9d9d9;
+  border-bottom: 2px solid #818181;
+  width: 20vw;
+  height: 75vh;
+  float: right;
+  border-radius: 5px;
+  box-shadow: 5px 10px 4px rgb(0, 0, 0, 25%);
+  margin-left: auto;
+  align-items: center;
+}
+
+#button1 {
+  margin-top: 2%;
+  width: 30%;
+  height: 10%;
+}
+#button2 {
+  margin-top: 2%;
+  width: 30%;
+  height: 10%;
+  float: right;
+}

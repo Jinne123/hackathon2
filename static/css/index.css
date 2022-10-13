@@ -1,0 +1,42 @@
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* text-align: center; */
+  background-color: white;
+  height: 70vh;
+  width: 37vw;
+  border-radius: 10px;
+  box-shadow: 5px 10px 4px rgb(0, 0, 0, 25%);
+}
+
+#form_gegevens {
+  margin: 5%;
+}
+
+.form-control {
+  margin-bottom: 7%;
+  height: 200%;
+  font-size: 200%;
+}
+
+.form_label {
+  margin-left: 5px;
+}
+
+#submit_button1 {
+  bottom: 5%;
+  position: absolute;
+  left: 5%;
+  width: 90%;
+}
+
+.eindbestemming {
+  margin-bottom: 7%;
+  height: 200%;
+  font-size: 200%;
+  text-align: center;
+  color: #0094ff;
+  font-weight: 650;
+}

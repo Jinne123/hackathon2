@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/route.css' %}" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Hitch-tracker</title>
+  </head>
+  <body style="height: 100%; margin: 0%; background-color: rgb(22, 25, 53)">
+    <div class="bg">
+      <div class="middle">
+        <div class="maps1">
+          <div class="text"><h1>Optimale route</h1></div>
+          <div class="map1">
+            <div id="map" class="map1" width="100%" style="height: 100%"></div>
+            <script>
+              mapboxgl.accessToken = "{{ mapbox_access_token }}";
+              var map = new mapboxgl.Map({
+                container: "map",
+                style: "mapbox://styles/mapbox/streets-v10",
+              });
+            </script>
+          </div>
+        </div>
+        <div class="maps1">
+          <div class="text"><h1>Huidige route</h1></div>
+          <div class="map2">
+            <div id="map2" class="map2" width="100%" style="height: 100%"></div>
+            <script>
+              mapboxgl.accessToken = "{{ mapbox_access_token }}";
+              var map = new mapboxgl.Map({
+                container: "map2",
+                style: "mapbox://styles/mapbox/streets-v10",
+                center: [5.725, 51.80917],
+                zoom: 13,
+              });
+            </script>
+          </div>
+        </div>
+        <div class="prices">
+          <div class="text"><h1>Te betalen prijs</h1></div>
+          <div class="price">
+            <div class="price_top">
+              <div class="price_top2">
+                <h4>Starttarief: €{{ starttarief }}</h4>
+              </div>
+              <div class="price_top2">
+                <h4>Per kilometer: €{{ per_kilometer }}</h4>
+              </div>
+            </div>
+            <div class="price_middle">
+              <div class="price_middle2">
+                <div class="price_middle3">
+                  <h4 class="float_left">
+                    1X Starttarief = €{{ starttarief }}
+                  </h4>
+                </div>
+                <div class="price_middle3">
+                  <h4 class="float_left">
+                    {{ afstand }}X Kilometer = €{{ afstand_kilometer }}
+                  </h4>
+                  <h3 class="price_middle_plus">+</h3>
+                </div>
+              </div>
+            </div>
+            <div class="price_bottom">
+              <h3><b>€{{ total }}</b></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
